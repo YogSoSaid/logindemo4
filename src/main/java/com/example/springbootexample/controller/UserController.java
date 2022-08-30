@@ -49,6 +49,7 @@ public class UserController {
         System.out.print(users);
         return users;
     }
+    
     @PostMapping("/deleteByUid")
     public String deleteByUidController(@RequestParam Long uid) {
         userService.deleteByUid(uid);
