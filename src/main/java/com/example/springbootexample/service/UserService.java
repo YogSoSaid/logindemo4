@@ -12,6 +12,6 @@ public interface UserService {
     List<User> findService(Long uid);
 
     List<User> findUserAll();
+    void deleteByUid(Long uid);
 
-    User deleteOneUserService();
 }

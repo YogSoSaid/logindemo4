@@ -42,10 +42,16 @@ public class UserController {
         System.out.print(users);
         return users;
     }
+
     @GetMapping("/findUserAll")
     public List<User> findAllController(Model model) {
         List<User> users = userService.findUserAll();
         System.out.print(users);
         return users;
+    }
+    @PostMapping("/deleteByUid")
+    public String deleteByUidController(@RequestParam Long uid) {
+        userService.deleteByUid(uid);
+        return "删除成功";
     }
 }
